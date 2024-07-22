@@ -43,38 +43,6 @@ const CONTRACT_ID =
   }).call();
   console.log("Transaction Id(request): ", txn_request.transactionId);
 
-  const random_number = await contract.functions.get_random_number(seed1).get();
-  console.log("random number (seed1): ", random_number);
-
-
-  console.log("....... testing attempt 2 (2nd seed) .......")
-
-  const seed2 = generateSeed();
-
-  console.log("seed2 generated: ",seed2.toString());
-
-  const txn_request_2 = await contract.functions.request_random_number(seed2).callParams({
-    forward: [get_fee.value.toString(), baseAssetId],
-  }).call();
-  console.log("Transaction Id(request): ", txn_request_2.transactionId);
-
-  const random_number_2 = await contract.functions.get_random_number(seed2).get();
-  console.log("random number (seed 2): ", random_number_2);
-
-
-
-  console.log("....... testing attempt 3 (1st seed) .......")
-
-
-  console.log("seed1 generated: ",seed1.toString());
-
-  // const txn_request_3 = await contract.functions.request_random_number(seed1.toString()).callParams({
-  //   forward: [get_fee.value.toString(), baseAssetId],
-  // }).call();
-  // console.log("Transaction Id(request): ", txn_request_3.transactionId);
-
-  const random_number_3 = await contract.functions.get_random_number(seed1).get();
-  console.log("random number (seed 1): ", random_number_3);
 
 
 })();
