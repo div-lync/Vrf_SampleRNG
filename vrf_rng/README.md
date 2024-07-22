@@ -10,4 +10,4 @@
 
 ### Latest deployed contract
 
-- Testnet: `0xd6ec7758bb60c25502ed209f2acbf17ee3d1cdc9f36274dd0fb9d040713e6b32`
+- Testnet: `0x271fd38866c6aa3bafe5c9ae9306435c57250ab7608771adc45c64beec33abe8`

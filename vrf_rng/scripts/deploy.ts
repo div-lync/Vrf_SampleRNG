@@ -1,17 +1,14 @@
 import { Provider, WalletUnlocked } from "fuels";
 import { VrfLyncAbi__factory } from "../typegen";
 import bytecode from "../typegen/VrfLyncAbi.hex";
-import dotenv from "dotenv";
-//import {  } from "../typegen/VrfLyncAbi";
 
-dotenv.config();
 
 const FUEL_RPC_URL = "https://testnet.fuel.network/v1/graphql";
 
 (async () => {
   try {
     const provider = await Provider.create(FUEL_RPC_URL);
-    const mnemonic = process.env.MNEMONIC;
+    const mnemonic = "_____ your mnemonic here ____";
     const wallet = WalletUnlocked.fromMnemonic(
       mnemonic!,
       undefined,

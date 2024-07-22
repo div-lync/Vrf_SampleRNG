@@ -1,8 +1,6 @@
 import { Provider, Wallet, WalletUnlocked, hashMessage } from "fuels";
 import { VrfLyncAbi__factory } from "../typegen";
-import dotenv from "dotenv";
 import { getRandomB256 } from "fuels";
-dotenv.config();
 
 const FUEL_RPC_URL = "https://testnet.fuel.network/v1/graphql";
 const CONTRACT_ID =
@@ -17,7 +15,7 @@ const CONTRACT_ID =
   //try {
   const provider = await Provider.create(FUEL_RPC_URL);
   const baseAssetId = provider.getBaseAssetId();
-  const mnemonic = process.env.MNEMONIC;
+  const mnemonic = "_____ your mnemonic here ____";
   const wallet = WalletUnlocked.fromMnemonic(
     mnemonic!,
     undefined,
