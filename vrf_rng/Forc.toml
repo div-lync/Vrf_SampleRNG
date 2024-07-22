@@ -1,0 +1,11 @@
+[project]
+authors = ["divy@lync.world"]
+entry = "main.sw"
+license = "Apache-2.0"
+name = "vrf_lync"
+
+[dependencies]
+vrf_abi = { path = "../vrf_abi" }
+
+
+

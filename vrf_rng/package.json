@@ -1,0 +1,22 @@
+{
+  "name": "vrf_rng",
+  "version": "1.0.0",
+  "description": "",
+  "main": "deploy.js",
+  "scripts": {
+    "clean": "rm -rf ./out",
+    "build": "forc build --release",
+    "build_dev": "forc build",
+    "typegen": "pnpm build && pnpm fuels typegen -i ./out/release/vrf_lync-abi.json -o ./typegen",
+    "deploy_contract": "pnpm typegen && pnpx ts-node scripts/deploy.ts",
+    "test_contract": "pnpx ts-node scripts/test_contract.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "LYNC WORLD",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "fuels": "0.88.0"
+  }
+}
