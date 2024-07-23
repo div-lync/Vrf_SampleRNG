@@ -17,6 +17,6 @@
   "dependencies": {
     "crypto": "^1.0.1",
     "dotenv": "^16.4.5",
-    "fuels": "0.88.0"
+    "fuels": "0.90.0"
   }
 }
